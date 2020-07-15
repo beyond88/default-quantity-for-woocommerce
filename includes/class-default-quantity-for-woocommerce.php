@@ -161,7 +161,8 @@ class Default_Quantity_For_Woocommerce {
 		$this->loader->add_action( 'product_cat_edit_form_fields', $plugin_admin, 'dqfwc_taxonomy_edit_meta_field', 10, 2 );
 		$this->loader->add_action( 'edited_product_cat', $plugin_admin, 'dqfwc_save_taxonomy_custom_meta', 10, 2 );
 		$this->loader->add_action( 'create_product_cat', $plugin_admin, 'dqfwc_save_taxonomy_custom_meta', 10, 2 );	
-		$this->loader->add_action('woocommerce_product_options_inventory_product_data', $plugin_admin, 'dqfwc_product_default_quantity_meta' );
+		$this->loader->add_action( 'woocommerce_product_options_inventory_product_data', $plugin_admin, 'dqfwc_product_default_quantity_meta' );
+		$this->loader->add_action( 'woocommerce_process_product_meta', $plugin_admin, 'dqfwc_save_product_default_quantity_meta' );
 
 	}
 
