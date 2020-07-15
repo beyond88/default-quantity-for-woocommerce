@@ -154,8 +154,13 @@ class Default_Quantity_For_Woocommerce {
 
 		$plugin_admin = new Default_Quantity_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'dqfwc_enqueue_styles' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'dqfwc_enqueue_scripts' );
+		$this->loader->add_filter( 'woocommerce_inventory_settings', $plugin_admin, 'dqfwc_default_quantity_settings' );
+		$this->loader->add_action( 'product_cat_add_form_fields',  $plugin_admin, 'dqfwc_taxonomy_add_new_meta_field', 10, 2 );
+		$this->loader->add_action( 'product_cat_edit_form_fields', $plugin_admin, 'dqfwc_taxonomy_edit_meta_field', 10, 2 );
+		$this->loader->add_action( 'edited_product_cat', $plugin_admin, 'dqfwc_save_taxonomy_custom_meta', 10, 2 );
+		$this->loader->add_action( 'create_product_cat', $plugin_admin, 'dqfwc_save_taxonomy_custom_meta', 10, 2 );	
 
 	}
 
