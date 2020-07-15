@@ -186,4 +186,24 @@ class Default_Quantity_For_Woocommerce_Admin {
 		
 	}
 
+	/**
+	 * Add default quantity meta for individual products.
+	 *
+	 * @since   1.0.0
+	 * @params 	none		
+	 * @return 	void 
+	*/	
+	public function dqfwc_product_default_quantity_meta() {
+		woocommerce_wp_text_input([
+			'id' 	=> 'dqfwc_default_quantity',
+			'label' => __('Default quantity', 'default-quantity-for-woocommerce'),
+			'type'  => 'number',
+			'custom_attributes' => array(
+				'step' => '1',
+				'min'  => '0'
+			),			
+		]);
+
+	}	
+
 }
