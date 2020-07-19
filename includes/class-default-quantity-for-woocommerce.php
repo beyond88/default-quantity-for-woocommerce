@@ -153,9 +153,6 @@ class Default_Quantity_For_Woocommerce {
 	private function define_admin_hooks() {
 
 		$plugin_admin = new Default_Quantity_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'dqfwc_enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'dqfwc_enqueue_scripts' );
 		$this->loader->add_filter( 'woocommerce_inventory_settings', $plugin_admin, 'dqfwc_default_quantity_settings' );
 		$this->loader->add_action( 'product_cat_add_form_fields',  $plugin_admin, 'dqfwc_taxonomy_add_new_meta_field', 10, 2 );
 		$this->loader->add_action( 'product_cat_edit_form_fields', $plugin_admin, 'dqfwc_taxonomy_edit_meta_field', 10, 2 );
@@ -176,9 +173,6 @@ class Default_Quantity_For_Woocommerce {
 	private function define_public_hooks() {
 
 		$plugin_public = new Default_Quantity_For_Woocommerce_Public( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_filter( 'woocommerce_quantity_input_args', $plugin_public, 'dqfwc_quantity_input_args', 10, 2 );
 
 	}

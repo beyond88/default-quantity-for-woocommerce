@@ -11,17 +11,6 @@
  *
  * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/includes
- */
-
-/**
- * Define the internationalization functionality.
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
- *
- * @since      1.0.0
- * @package    Default_Quantity_For_Woocommerce
- * @subpackage Default_Quantity_For_Woocommerce/includes
  * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
  */
 class Default_Quantity_For_Woocommerce_i18n {

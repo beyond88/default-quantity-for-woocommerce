@@ -8,17 +8,6 @@
  *
  * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/includes
- */
-
-/**
- * Register all actions and filters for the plugin.
- *
- * Maintain a list of all hooks that are registered throughout
- * the plugin, and register them with the WordPress API. Call the
- * run function to execute the list of actions and filters.
- *
- * @package    Default_Quantity_For_Woocommerce
- * @subpackage Default_Quantity_For_Woocommerce/includes
  * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
  */
 class Default_Quantity_For_Woocommerce_Loader {

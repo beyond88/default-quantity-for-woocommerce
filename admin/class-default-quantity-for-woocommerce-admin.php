@@ -54,24 +54,6 @@ class Default_Quantity_For_Woocommerce_Admin {
 	}
 
 	/**
-	 * Register the stylesheets for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function dqfwc_enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/default quantity-for-woocommerce-admin.css', array(), $this->version, 'all' );
-	}
-
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function dqfwc_enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/default quantity-for-woocommerce-admin.js', array( 'jquery' ), $this->version, false );
-	}
-
-	/**
 	 * Register the default quantity settings for the products.
 	 *
 	 * @since   1.0.0
