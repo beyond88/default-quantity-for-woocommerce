@@ -8,16 +8,6 @@
  *
  * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/admin
- */
-
-/**
- * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
- *
- * @package    Default_Quantity_For_Woocommerce
- * @subpackage Default_Quantity_For_Woocommerce/admin
  * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
  */
 class Default_Quantity_For_Woocommerce_Admin {

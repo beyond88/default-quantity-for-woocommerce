@@ -11,20 +11,6 @@
  *
  * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/includes
- */
-
-/**
- * The core plugin class.
- *
- * This is used to define internationalization, admin-specific hooks, and
- * public-facing site hooks.
- *
- * Also maintains the unique identifier of this plugin as well as the current
- * version of the plugin.
- *
- * @since      1.0.0
- * @package    Default_Quantity_For_Woocommerce
- * @subpackage Default_Quantity_For_Woocommerce/includes
  * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
  */
 class Default_Quantity_For_Woocommerce {
