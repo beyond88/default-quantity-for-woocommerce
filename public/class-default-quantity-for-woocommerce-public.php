@@ -8,15 +8,6 @@
  *
  * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/public
- */
-
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Default_Quantity_For_Woocommerce
  * @subpackage Default_Quantity_For_Woocommerce/public
  * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
  */
@@ -55,49 +46,40 @@ class Default_Quantity_For_Woocommerce_Public {
 	}
 
 	/**
-	 * Register the stylesheets for the public-facing side of the site.
+	 * Save default quantity meta value for individual products.
 	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+	 * @since   1.0.0
+	 * @params 	array, object		
+	 * @return 	array
+	*/	
+	public function dqfwc_quantity_input_args( $args, $product ) {		
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Default_Quantity_For_Woocommerce_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Default_Quantity_For_Woocommerce_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		// Retrieve global default quanity
+		$dqfwc_global 		 = get_option( 'woocommerce_default_quantity' );
+		if( ! empty( $dqfwc_global ) ) {
+			$args['min_value']   = (int) $dqfwc_global;
+			$args['input_value'] = (int) $dqfwc_global;
+		}
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/default quantity-for-woocommerce-public.css', array(), $this->version, 'all' );
+		//Retrieve product category meta
+		$dqfwc_product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+		foreach( $dqfwc_product_cats as $term ) {
+			$term_id 	= $term->term_id;
+			$term_meta  = get_option( "taxonomy_" . $term_id );
+			if( isset($term_meta['dqfwc_quantity']) && !empty( $term_meta['dqfwc_quantity'] ) ){
+				$args['min_value']   = (int) $term_meta['dqfwc_quantity'];
+				$args['input_value'] = (int) $term_meta['dqfwc_quantity'];
+			}
+		}
 
-	}
-
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Default_Quantity_For_Woocommerce_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Default_Quantity_For_Woocommerce_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/default quantity-for-woocommerce-public.js', array( 'jquery' ), $this->version, false );
-
+		// Individual product default quantity
+		$dqfwc_quantity 	 = get_post_meta( $product->get_id(), 'dqfwc_default_quantity', true );
+		if( ! empty( $dqfwc_quantity ) ) {
+			$args['min_value']   = (int) $dqfwc_quantity;
+			$args['input_value'] = (int) $dqfwc_quantity;
+		}
+		
+		return $args;
 	}
 
 }
