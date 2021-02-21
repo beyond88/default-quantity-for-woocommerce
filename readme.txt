@@ -1,9 +1,9 @@
 === Default Quantity for WooCommerce ===
-Contributors: thewpnext, hossain88
-Donate Link: http://thewpnext.com
+Contributors: hossain88
+Donate Link: http://thenextwp.co
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
 Requires at least: 4.4
-Tested up to: 5.4.1
+Tested up to: 5.6
 WC requires at least: 3.1
 WC tested up to: 4.1.0
 Requires PHP: 5.6
@@ -53,3 +53,6 @@ Simple, powerfull default quantity options. Change the default quantity and subt
 
 = 1.0.0 =
 Initial version released
+
+= 1.0.1 =
+Fix fatal error
