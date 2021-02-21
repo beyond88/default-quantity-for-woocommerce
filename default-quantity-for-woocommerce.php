@@ -2,7 +2,7 @@
 
 /**
  *
- * @link              https://www.thewpnext.com
+ * @link              https://www.thenextwp.co
  * @since             1.0.0
  * @package           Default_Quantity_For_Woocommerce
  *
@@ -10,13 +10,21 @@
  * Plugin Name:       Default Quantity for WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/default quantity-for-woocommerce
  * Description:       The easy way to set default quantities in WooCommerce.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Mohiuddin Abdul Kader
  * Author URI:        https://profiles.wordpress.org/hossain88
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       default-quantity-for-woocommerce
  * Domain Path:       /languages
+ * Requires PHP:      5.6
+ * Requires at least: 4.4
+ * Tested up to:      5.6
+ *
+ * WC requires at least: 3.1
+ * WC tested up to:   4.9.1 
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 // If this file is called directly, abort.
@@ -24,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'DQFWC_VERSION', '1.0.0' );
+define( 'DQFWC_VERSION', '1.0.1' );
 define( 'DQFWC_MINIMUM_PHP_VERSION', '5.6.0' );
 define( 'DQFWC_MINIMUM_WP_VERSION', '4.4' );
 define( 'DQFWC_MINIMUM_WC_VERSION', '3.0.9' );

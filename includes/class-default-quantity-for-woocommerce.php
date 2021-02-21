@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://www.thewpnext.com
+ * @link       https://www.thenextwp.co
  * @since      1.0.0
  *
  * @package    Default_Quantity_For_Woocommerce
@@ -56,7 +56,7 @@ class Default_Quantity_For_Woocommerce {
 		if ( defined( 'DQFWC_VERSION' ) ) {
 			$this->version = DQFWC_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->plugin_name = 'default-quantity-for-woocommerce';
 
