@@ -56,7 +56,7 @@ class Default_Quantity_For_Woocommerce {
 		if ( defined( 'DQFWC_VERSION' ) ) {
 			$this->version = DQFWC_VERSION;
 		} else {
-			$this->version = '1.0.1';
+			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'default-quantity-for-woocommerce';
 
