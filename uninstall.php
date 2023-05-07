@@ -4,7 +4,7 @@
  * Fired when the plugin is uninstalled.
  *
  *
- * @link       https://www.thenextwp.co
+ * @link       https://github.com/beyond88
  * @since      1.0.0
  *
  * @package    Default_Quantity_For_Woocommerce

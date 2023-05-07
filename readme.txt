@@ -1,17 +1,17 @@
 === Default Quantity for WooCommerce ===
 Contributors: hossain88
-Donate Link: http://thenextwp.co
+Donate Link: https://www.linkedin.com/in/mohiuddin-abdul-kader
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
 Requires at least: 4.4
-Tested up to: 5.6
+Tested up to: 6.0.1
 WC requires at least: 3.1
-WC tested up to: 4.1.0
+WC tested up to: 6.7.0
 Requires PHP: 5.6
-Stable tag: 3.0.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easy way to set default quatities in WooCommerce.
+The easiest way to set up default quantities for WooCommerce.
 
 == Description ==
 
@@ -57,5 +57,8 @@ Initial version released
 = 1.0.1 =
 Fix fatal error
 
-= 1.0.2 =
+= 1.0.3 =
 Fix missing admin directory
+
+= 1.0.3 =
+Tested on latest WordPress and WooCommerce

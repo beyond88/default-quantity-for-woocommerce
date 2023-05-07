@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://www.thenextwp.co
+ * @link       https://github.com/beyond88
  * @since      1.0.0
  *
  * @package    Default_Quantity_For_Woocommerce
@@ -173,7 +173,7 @@ class Default_Quantity_For_Woocommerce_Admin {
 			'type'  => 'number',
 			'custom_attributes' => array(
 				'step' => '1',
-				'min'  => '0'
+				'min'  => '1'
 			),			
 		]);
 		

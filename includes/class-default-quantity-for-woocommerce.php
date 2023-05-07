@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://www.thenextwp.co
+ * @link       https://github.com/beyond88
  * @since      1.0.0
  *
  * @package    Default_Quantity_For_Woocommerce
