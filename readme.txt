@@ -57,7 +57,7 @@ Initial version released
 = 1.0.1 =
 Fix fatal error
 
-= 1.0.3 =
+= 1.0.2 =
 Fix missing admin directory
 
 = 1.0.3 =
