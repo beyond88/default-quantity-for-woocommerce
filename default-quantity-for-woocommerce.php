@@ -99,10 +99,9 @@ final class DefaultQuantityForWoocommerce {
 
         if ( is_admin() ) {
             new Mak\DefaultQuantityForWoocommerce\Admin();
-        } else {
-            //new Woo_Tripletex\Frontend();
         }
 
+        new Mak\DefaultQuantityForWoocommerce\Frontend();
         new Mak\DefaultQuantityForWoocommerce\API();
     }
 

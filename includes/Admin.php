@@ -1,7 +1,6 @@
 <?php
 
 namespace Mak\DefaultQuantityForWoocommerce;
-
 use Mak\DefaultQuantityForWoocommerce\Admin\Settings;
 
 /**
