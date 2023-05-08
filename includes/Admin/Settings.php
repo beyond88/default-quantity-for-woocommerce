@@ -1,54 +1,35 @@
 <?php
 
-/**
- * The admin-specific functionality of the plugin.
- *
- * @link       https://github.com/beyond88
- * @since      1.0.0
- *
- * @package    Default_Quantity_For_Woocommerce
- * @subpackage Default_Quantity_For_Woocommerce/admin
- * @author     Mohiuddin Abdul Kader <muhin.cse.diu@gmail.com>
- */
-class Default_Quantity_For_Woocommerce_Admin {
+namespace Mak\DefaultQuantityForWoocommerce\Admin;
+use Mak\DefaultQuantityForWoocommerce\Traits\Singleton;
 
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
+class Settings {
 
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
+    use Singleton;
+	/* Bootstraps the class and hooks required actions & filters.
+     *
+	 * @since   2.0.0
+	 * @params 	none		
+	 * @return 	void
+     */
+    public function init() {   
 
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct( $plugin_name, $version ) {
+	    add_filter( 'woocommerce_inventory_settings', [ $this, 'dqfwc_default_quantity_settings' ] );
+	    add_action( 'product_cat_add_form_fields',  [ $this, 'dqfwc_taxonomy_add_new_meta_field' ], PHP_INT_MAX, 2 );
+	    add_action( 'product_cat_edit_form_fields', [ $this, 'dqfwc_taxonomy_edit_meta_field' ], PHP_INT_MAX, 2 );
+	    add_action( 'edited_product_cat', [ $this, 'dqfwc_save_taxonomy_custom_meta' ], PHP_INT_MAX, 2 );
+	    add_action( 'create_product_cat', [ $this, 'dqfwc_save_taxonomy_custom_meta' ], PHP_INT_MAX, 2 );	
+	    add_action( 'woocommerce_product_options_inventory_product_data', [ $this, 'dqfwc_product_default_quantity_meta' ] );
+	    add_action( 'woocommerce_process_product_meta', [ $this, 'dqfwc_save_product_default_quantity_meta' ] );
 
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
-	}
+    }
 
-	/**
+    /**
 	 * Register the default quantity settings for the products.
 	 *
 	 * @since   1.0.0
 	 * @params 	array		
-	 * @return 	void 
+	 * @return 	void
 	*/	
 	public function dqfwc_default_quantity_settings( $settings ) {
 
@@ -58,7 +39,7 @@ class Default_Quantity_For_Woocommerce_Admin {
 			$new_settings[] = $setting;
 			if ( 'woocommerce_manage_stock' === $setting['id'] ) {
 				$new_settings[] = array(
-					'title'             => __( 'Global default quantity', 'woocommerce' ),
+					'title'             => __( 'Global default quantity', 'default-quantity-for-woocommerce' ),
 					'desc'              => __( 'Choose a default quantity for all your products. You can override this for individual categories/products', 'woocommerce' ),
 					'id'                => 'woocommerce_default_quantity',
 					'type'              => 'number',
@@ -91,11 +72,11 @@ class Default_Quantity_For_Woocommerce_Admin {
 
 		<div class="form-field">
 			<label for="term_meta[dqfwc_quantity]">
-				<?php _e('Default quantity', 'default-quantity-for-woocommerce'); ?>
+				<?php echo __('Default quantity', 'default-quantity-for-woocommerce'); ?>
 			</label>
 			<input type="number" name="term_meta[dqfwc_quantity]" id="term_meta[dqfwc_quantity]" min="0" step="1">
 			<p class="description">
-				<?php _e('Enter default quantity', 'default-quantity-for-woocommerce'); ?>
+				<?php echo __('Enter default quantity', 'default-quantity-for-woocommerce'); ?>
 			</p>
 		</div>
 
@@ -119,13 +100,13 @@ class Default_Quantity_For_Woocommerce_Admin {
 		<tr class="form-field">
 			<th scope="row" valign="top">
 				<label for="term_meta[dqfwc_quantity]">
-					<?php _e('Default quantity', 'default-quantity-for-woocommerce'); ?>
+					<?php echo __('Default quantity', 'default-quantity-for-woocommerce'); ?>
 				</label>
 			</th>
 			<td>
 				<input type="number" name="term_meta[dqfwc_quantity]" id="term_meta[dqfwc_quantity]" min="0" step="1" value="<?php echo esc_attr($term_meta['dqfwc_quantity']) ? esc_attr($term_meta['dqfwc_quantity']) : ''; ?>">
 				<p class="description">
-					<?php _e('Enter default quantity', 'default-quantity-for-woocommerce'); ?>
+					<?php echo __('Enter default quantity', 'default-quantity-for-woocommerce'); ?>
 				</p>
 			</td>			
 		</tr>
@@ -192,6 +173,6 @@ class Default_Quantity_For_Woocommerce_Admin {
 		$product->update_meta_data( 'dqfwc_default_quantity', sanitize_text_field( $_POST['dqfwc_default_quantity'] ) );
 		$product->save();
 
-	}	
+	}
 
 }

@@ -1,0 +1,24 @@
+{
+  "name": "mak/default-quantity-for-woocommerce",
+  "description": "WordPress plugin",
+  "type": "project",
+  "autoload": {
+    "classmap": [
+      "includes"
+    ],
+    "psr-4": {
+      "Mak\\DefaultQuantityForWoocommerce\\": "includes/"
+    },
+    "files": [
+      "includes/functions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "beyond88",
+      "email": "muhin.cse.diu@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}

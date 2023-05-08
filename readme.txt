@@ -3,11 +3,11 @@ Contributors: hossain88
 Donate Link: https://www.linkedin.com/in/mohiuddin-abdul-kader
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
 Requires at least: 4.4
-Tested up to: 6.0.1
+Tested up to: 6.2
 WC requires at least: 3.1
 WC tested up to: 6.7.0
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,3 +62,6 @@ Fix missing admin directory
 
 = 1.0.3 =
 Tested on latest WordPress and WooCommerce
+
+= 2.0.0 =
+Tested on 6.2 and added composer
