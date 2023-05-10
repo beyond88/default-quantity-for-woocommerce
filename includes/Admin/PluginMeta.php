@@ -27,7 +27,7 @@ class PluginMeta
     {
 
         $links[] = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=products&section=inventory' ) . '">' . __( 'Settings', 'default-quantity-for-woocommerce' ) . '</a>';
-		$links[] = '<a href="#">' . __( 'Docs', 'default-quantity-for-woocommerce' ) . '</a>';
+		$links[] = '<a href="https://github.com/beyond88/default-quantity-for-woocommerce/wiki">' . __( 'Docs', 'default-quantity-for-woocommerce' ) . '</a>';
         return $links;
 
     }
@@ -46,8 +46,8 @@ class PluginMeta
 			return $links;
 		}
 
-		$support_link = '<a target="_blank" href="#/support" title="' . __('Get help', 'default-quantity-for-woocommerce') . '">' . __('Support', 'default-quantity-for-woocommerce') . '</a>';
-		$home_link = '<a target="_blank" href="#" title="' . __('Plugin Homepage', 'default-quantity-for-woocommerce') . '">' . __('Plugin Homepage', 'default-quantity-for-woocommerce') . '</a>';
+		$support_link = '<a target="_blank" href="https://github.com/beyond88/default-quantity-for-woocommerce/issues" title="' . __('Get help', 'default-quantity-for-woocommerce') . '">' . __('Support', 'default-quantity-for-woocommerce') . '</a>';
+		$home_link = '<a target="_blank" href="https://github.com/beyond88/default-quantity-for-woocommerce/" title="' . __('Plugin Homepage', 'default-quantity-for-woocommerce') . '">' . __('Plugin Homepage', 'default-quantity-for-woocommerce') . '</a>';
 		$rate_link = '<a target="_blank" href="https://wordpress.org/support/plugin/default-quantity-for-woocommerce/reviews/#new-post" title="' . __('Rate the plugin', 'default-quantity-for-woocommerce') . '">' . __('Rate the plugin ★★★★★', 'default-quantity-for-woocommerce') . '</a>';
 
 		$links[] = $support_link;
