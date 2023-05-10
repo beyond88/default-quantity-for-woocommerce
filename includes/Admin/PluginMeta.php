@@ -42,7 +42,7 @@ class PluginMeta
     public function plugin_meta_links( $links, $file ) 
     {
         
-        if ($file !== plugin_basename( SAMPLY_FILE )) {
+        if ($file !== plugin_basename( DQFWC_FILE )) {
 			return $links;
 		}
 
