@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:       Default Quantity for WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/default-quantity-for-woocommerce
- * Description:       The easiest way to set up default quantities for WooCommerce.
+ * Description:       Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
  * Version:           2.0.0
  * Author:            Mohiuddin Abdul Kader
  * Author URI:        https://profiles.wordpress.org/hossain88

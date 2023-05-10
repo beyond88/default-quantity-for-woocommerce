@@ -11,7 +11,7 @@ Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easiest way to set up default quantities for WooCommerce.
+Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
 
 == Description ==
 
@@ -37,11 +37,11 @@ With its simple yet powerful default quantity options, the plugin allows you to 
 
 ## CHOOSE ANY DEFAULT QUANTITY - EVEN ZERO!
 
-⚖️ Change the WooCommerce default quantity to zero and give customers complete freedom.
+🎉 Change the WooCommerce default quantity to zero and give customers complete freedom.
 
-⚖️ Set the initial quantity value to any number and motivate customers to buy larger quantities.
+🎉 Set the initial quantity value to any number and motivate customers to buy larger quantities.
 
-⚖️ The customer can override the default quantity and select any quantity they choose.
+🎉 The customer can override the default quantity and select any quantity they choose.
 
 ## QUICK 2-MINUTE SETUP
 
@@ -50,6 +50,16 @@ With its simple yet powerful default quantity options, the plugin allows you to 
 ⚖️ Ideal for beginners or developers.
 
 ⚖️ Simply install the plugin, and start setting default quantities!
+
+## 👨‍💻 DOCUMENTATION AND SUPPORT ##
+
+- 👨‍💻 [Contact Our Support](https://github.com/beyond88/default-quantity-for-woocommerce/issues)
+- 📜 [Check Documentation](https://github.com/beyond88/default-quantity-for-woocommerce/wiki)
+
+== Screenshots ==
+
+1. Setting Menu.
+2. Setting in product details page.
 
 == Changelog ==
 
