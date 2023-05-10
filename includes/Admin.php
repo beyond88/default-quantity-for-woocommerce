@@ -13,6 +13,7 @@ class Admin {
      */
     function __construct() {
         Settings::instance()->init();
+        new Admin\PluginMeta();
     }
 
     /**

@@ -83,6 +83,12 @@ final class DefaultQuantityForWoocommerce {
         define( 'DQFWC_PATH', __DIR__ );
         define( 'DQFWC_URL', plugins_url( '', DQFWC_FILE ) );
         define( 'DQFWC_ASSETS', DQFWC_URL . '/assets' );
+        define( 'DQFWC_BASENAME', plugin_basename( __FILE__ ) );
+        define( 'DQFWC_PLUGIN_NAME', 'Default quantity for WooCommerce' );
+        define( 'DQFWC_MIN_WC_VERSION', '3.1' );
+        define( 'DQFWC_MINIMUM_PHP_VERSION', '5.6.0' );
+        define( 'DQFWC_MINIMUM_WP_VERSION', '4.4' );
+        define( 'DQFWC_MINIMUM_WC_VERSION', '3.1' );
     }
 
     /**
