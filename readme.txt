@@ -2,12 +2,12 @@
 Contributors: hossain88
 Donate Link: https://www.linkedin.com/in/mohiuddin-abdul-kader
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
-Requires at least: 4.4
+Requires at least: 5.0
 Tested up to: 6.2
-WC requires at least: 3.1
-WC tested up to: 6.7.0
+WC requires at least: 5.0
+WC tested up to: 7.8.2
 Requires PHP: 7.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
