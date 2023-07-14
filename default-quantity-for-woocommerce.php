@@ -2,7 +2,7 @@
 /**
  * Plugin main file.
  * 
- * @link              https://github.com/beyond88
+ * @link              https://github.com/beyond88/default-quantity-for-woocommerce
  * @since             1.0.0
  * @package           Default_Quantity_For_Woocommerce
  *
@@ -10,7 +10,7 @@
  * Plugin Name:       Default Quantity for WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/default-quantity-for-woocommerce
  * Description:       Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
- * Version:           2.0.1
+ * Version:           2.0.2
  * Author:            Mohiuddin Abdul Kader
  * Author URI:        https://github.com/beyond88
  * License:           GPL-2.0+
@@ -42,7 +42,7 @@ final class DefaultQuantityForWoocommerce {
 	 *
 	 * @var string
 	 */
-	const VERSION = '2.0.1';
+	const VERSION = '2.0.2';
 
 	/**
 	 * Class constructor.
