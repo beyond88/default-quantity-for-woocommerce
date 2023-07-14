@@ -87,4 +87,4 @@ Tested on latest WordPress and WooCommerce
 Tested on 6.2 and added composer
 
 = 2.0.1 =
-Tested on 6.2 and added composer
+Tested on WC 7.8.2 and update require PHP version

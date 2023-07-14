@@ -3,32 +3,32 @@
 namespace Mak\DefaultQuantityForWoocommerce;
 
 /**
- * Installer class
+ * Installer class.
  */
 class Installer {
 
-    /**
-     * Run the installer
-     *
-     * @return void
-     */
-    public function run() {
-        $this->add_version();
-    }
+	/**
+	 * Run the installer.
+	 *
+	 * @return void
+	 */
+	public function run(): void {
+		$this->add_version();
+	}
 
-    /**
-     * Add time and version on DB
-     * 
-     * @return void
-     */
-    public function add_version() {
-        $installed = get_option( 'dqfwc_installed' );
+	/**
+	 * Add time and version on DB.
+	 *
+	 * @return void
+	 */
+	public function add_version(): void {
+		$installed = get_option( 'dqfwc_installed' );
 
-        if ( ! $installed ) {
-            update_option( 'dqfwc_installed', time() );
-        }
+		if ( ! $installed ) {
+			update_option( 'dqfwc_installed', time() );
+		}
 
-        update_option( 'dqfwc_version', DQFWC_VERSION );
-    }
+		update_option( 'dqfwc_version', DQFWC_VERSION );
+	}
 
 }
