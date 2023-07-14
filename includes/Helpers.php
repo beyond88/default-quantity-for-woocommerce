@@ -2,7 +2,6 @@
 
 namespace Mak\DefaultQuantityForWoocommerce;
 
-class Helpers 
-{
+class Helpers {
 
 }

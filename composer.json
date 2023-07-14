@@ -2,6 +2,17 @@
   "name": "mak/default-quantity-for-woocommerce",
   "description": "WordPress plugin",
   "type": "project",
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "wp-coding-standards/wpcs": "^2"
+  },
   "autoload": {
     "classmap": [
       "includes"

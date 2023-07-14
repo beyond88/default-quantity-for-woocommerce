@@ -3,14 +3,14 @@
 namespace Mak\DefaultQuantityForWoocommerce;
 
 /**
- * Ajax handler class
+ * Ajax handler class.
  */
-class Ajax
-{
-    /**
-     * Class constructor
-     */
-    function __construct() { 
-    }
+class Ajax {
+
+	/**
+	 * Class constructor.
+	 */
+	public function __construct() {
+	}
 
 }
