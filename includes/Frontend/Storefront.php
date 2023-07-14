@@ -1,6 +1,7 @@
 <?php
 
 namespace Mak\DefaultQuantityForWoocommerce\Frontend;
+
 use Mak\DefaultQuantityForWoocommerce\Traits\Singleton;
 
 /**
@@ -12,8 +13,7 @@ class Storefront {
     /**
 	 * Load filters and actions to display default quantity.
 	 *
-	 * @since   2.0.0
-	 * @params 	none		
+	 * @since   2.0.0		
 	 * @return 	void
 	*/
     public function init() {
@@ -24,7 +24,7 @@ class Storefront {
 	 * Save default quantity meta value for individual products.
 	 *
 	 * @since   1.0.0
-	 * @params 	array, object		
+	 * @param 	array, object		
 	 * @return 	array
 	*/	
 	public function dqfwc_quantity_input_args( $args, $product ) {		

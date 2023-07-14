@@ -18,6 +18,8 @@ class Installer {
 
     /**
      * Add time and version on DB
+     * 
+     * @return void
      */
     public function add_version() {
         $installed = get_option( 'dqfwc_installed' );

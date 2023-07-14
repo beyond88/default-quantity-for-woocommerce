@@ -5,11 +5,14 @@ use Mak\DefaultQuantityForWoocommerce\Traits\Singleton;
 
 class Settings {
 
+	/**
+	 * Use singleton traits
+	 */
     use Singleton;
-	/* Bootstraps the class and hooks required actions & filters.
+
+	/** Bootstraps the class and hooks required actions & filters.
      *
 	 * @since   2.0.0
-	 * @params 	none		
 	 * @return 	void
      */
     public function init() {   
@@ -28,7 +31,7 @@ class Settings {
 	 * Register the default quantity settings for the products.
 	 *
 	 * @since   1.0.0
-	 * @params 	array		
+	 * @param 	array $settings		
 	 * @return 	void
 	*/	
 	public function dqfwc_default_quantity_settings( $settings ) {
@@ -62,8 +65,7 @@ class Settings {
 	/**
 	 * Add product category meta.
 	 *
-	 * @since   1.0.0
-	 * @params 	none		
+	 * @since   1.0.0		
 	 * @return 	void 
 	*/	
 	public function dqfwc_taxonomy_add_new_meta_field() {
@@ -88,7 +90,7 @@ class Settings {
 	 * Edit product category meta.
 	 *
 	 * @since   1.0.0
-	 * @params 	object		
+	 * @param 	object $term 	
 	 * @return 	void 
 	*/
 	public function dqfwc_taxonomy_edit_meta_field( $term ) {
@@ -118,7 +120,7 @@ class Settings {
 	 * Save product category meta value.
 	 *
 	 * @since   1.0.0
-	 * @params 	int, POST		
+	 * @param 	int $term_id		
 	 * @return 	void 
 	*/
 	public function dqfwc_save_taxonomy_custom_meta( $term_id ) {
@@ -142,8 +144,7 @@ class Settings {
 	/**
 	 * Add default quantity meta for individual products.
 	 *
-	 * @since   1.0.0
-	 * @params 	none		
+	 * @since   1.0.0		
 	 * @return 	void 
 	*/	
 	public function dqfwc_product_default_quantity_meta() {
@@ -164,7 +165,7 @@ class Settings {
 	 * Save default quantity meta value for individual products.
 	 *
 	 * @since   1.0.0
-	 * @params 	none		
+	 * @param	int $post_id		
 	 * @return 	void 
 	*/	
 	public function dqfwc_save_product_default_quantity_meta( $post_id ) {

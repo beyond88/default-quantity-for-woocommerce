@@ -21,9 +21,7 @@ class Assets {
      * @return array
      */
     public function get_scripts() {
-        return [
-
-        ];
+        return array();
     }
 
     /**
@@ -32,8 +30,7 @@ class Assets {
      * @return array
      */
     public function get_styles() {
-        return [
-        ];
+        return array();
     }
 
     /**

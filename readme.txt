@@ -6,7 +6,7 @@ Requires at least: 4.4
 Tested up to: 6.2
 WC requires at least: 3.1
 WC tested up to: 6.7.0
-Requires PHP: 5.6
+Requires PHP: 7.2
 Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,9 +17,7 @@ Discover the simplest method to establish default quantities for your WooCommerc
 
 = DEFAULT QUANTITY FOR WOOCOMMERCE =
 
-The WooCommerce Default Quantity plugin simplifies the task of adjusting initial quantity values in your online store. 
-Whether you want to modify the quantity for certain products, categories, or your entire inventory, this plugin has got you covered. With its straightforward functionality, you can easily set default quantity values to meet your specific requirements. 
-Whether you need a single product to start with a higher quantity or want to establish a standard value for an entire category, the WooCommerce Default Quantity plugin ensures seamless customization. Its efficiency and precision make it an invaluable tool for managing and streamlining your online store's inventory.
+The WooCommerce Default Quantity plugin simplifies the task of adjusting initial quantity values in your online store. Whether you want to modify the quantity for certain products, categories, or your entire inventory, this plugin has got you covered. With its straightforward functionality, you can easily set default quantity values to meet your specific requirements. Whether you need a single product to start with a higher quantity or want to establish a standard value for an entire category, the WooCommerce Default Quantity plugin ensures seamless customization. Its efficiency and precision make it an invaluable tool for managing and streamlining your online store's inventory.
 
 = POWERED BY WooCommerce =
 
@@ -45,11 +43,11 @@ With its simple yet powerful default quantity options, the plugin allows you to 
 
 ## QUICK 2-MINUTE SETUP
 
-⚖️ Incredibly simple to use.
+🔥 Incredibly simple to use.
 
-⚖️ Ideal for beginners or developers.
+🔥 Ideal for beginners or developers.
 
-⚖️ Simply install the plugin, and start setting default quantities!
+🔥 Simply install the plugin, and start setting default quantities!
 
 ## 👨‍💻 DOCUMENTATION AND SUPPORT ##
 
@@ -58,8 +56,18 @@ With its simple yet powerful default quantity options, the plugin allows you to 
 
 == Screenshots ==
 
-1. Setting Menu.
-2. Setting in product details page.
+1. Settings menu.
+2. Settings in product details page.
+
+== Installation ==
+
+This section describes how to install the plugin and get it working
+
+1. Upload the plugin zip file to your plugin directory ‘/wp-content/plugins/’
+2. Activate the plugin through the ‘Plugins’ menu in WordPress
+3. Go to product details and click on WooCommerce->Products->Inventory menu
+4. Set global default quantity
+5. Save/update the settings page
 
 == Changelog ==
 
@@ -76,4 +84,7 @@ Fix missing admin directory
 Tested on latest WordPress and WooCommerce
 
 = 2.0.0 =
+Tested on 6.2 and added composer
+
+= 2.0.1 =
 Tested on 6.2 and added composer

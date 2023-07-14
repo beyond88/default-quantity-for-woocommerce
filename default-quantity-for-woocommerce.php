@@ -11,17 +11,17 @@
  * Description:       Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
  * Version:           2.0.0
  * Author:            Mohiuddin Abdul Kader
- * Author URI:        https://profiles.wordpress.org/hossain88
+ * Author URI:        https://github.com/beyond88
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       default-quantity-for-woocommerce
  * Domain Path:       /languages
- * Requires PHP:      5.6
- * Requires at least: 4.4
+ * Requires PHP:      7.2
+ * Requires at least: 5.0
  * Tested up to:      6.2
  *
- * WC requires at least: 3.1
- * WC tested up to:   6.7.0
+ * WC requires at least: 5.0
+ * WC tested up to:   7.8.2
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -41,7 +41,7 @@ final class DefaultQuantityForWoocommerce {
      *
      * @var string
      */
-    const version = '2.0.0';
+    const version = '2.0.1';
 
     /**
      * Class constructor
