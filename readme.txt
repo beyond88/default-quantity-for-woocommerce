@@ -3,9 +3,9 @@ Contributors: hossain88
 Donate Link: https://github.com/beyond88
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
 Requires at least: 5.0
-Tested up to: 6.5.3
+Tested up to: 6.6.2
 WC requires at least: 5.0
-WC tested up to: 8.9.1
+WC tested up to: 9.3.3
 Requires PHP: 7.2
 Stable tag: 2.0.3
 License: GPLv2 or later
