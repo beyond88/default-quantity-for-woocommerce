@@ -10,7 +10,7 @@
  * Plugin Name:       Default Quantity for WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/default-quantity-for-woocommerce
  * Description:       Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
- * Version:           2.0.2
+ * Version:           2.0.4
  * Author:            Mohiuddin Abdul Kader
  * Author URI:        https://github.com/beyond88
  * License:           GPL-2.0+
@@ -42,7 +42,7 @@ final class DefaultQuantityForWoocommerce {
 	 *
 	 * @var string
 	 */
-	const VERSION = '2.0.2';
+	const VERSION = '2.0.4';
 
 	/**
 	 * Class constructor.
@@ -53,6 +53,13 @@ final class DefaultQuantityForWoocommerce {
 		$this->define_constants();
 		register_activation_hook( DQFWC_FILE, [ $this, 'activate' ] );
 		add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+		
+		// Declare HPOS compatibility early
+		add_action( 'before_woocommerce_init', function() {
+			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			}
+		} );
 	}
 
 	/**
@@ -94,14 +101,8 @@ final class DefaultQuantityForWoocommerce {
 	 * @return void
 	 */
 	public function init_plugin() {
-		add_action('woocommerce_init', function() {
-			if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil')) {
-				$methods = get_class_methods('\Automattic\WooCommerce\Utilities\OrderUtil');
-				if (in_array('declare_compatibility', $methods)) {
-					\Automattic\WooCommerce\Utilities\OrderUtil::declare_compatibility('custom_order_tables', __FILE__, true);
-				}
-			}
-		});
+		// Remove the old compatibility declaration
+		// The new one is added in the constructor with before_woocommerce_init hook
 
 		new Mak\DefaultQuantityForWoocommerce\Assets();
 		new Mak\DefaultQuantityForWoocommerce\Admin();
