@@ -11,10 +11,6 @@ class ComposerStaticInit71636747f311c95dd455df204bce9aa4
     );
 
     public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 57,
-        ),
         'M' => 
         array (
             'Mak\\DefaultQuantityForWoocommerce\\' => 34,
@@ -22,10 +18,6 @@ class ComposerStaticInit71636747f311c95dd455df204bce9aa4
     );
 
     public static $prefixDirsPsr4 = array (
-        'PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
-        ),
         'Mak\\DefaultQuantityForWoocommerce\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
@@ -34,15 +26,12 @@ class ComposerStaticInit71636747f311c95dd455df204bce9aa4
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Mak\\DefaultQuantityForWoocommerce\\API' => __DIR__ . '/../..' . '/includes/API.php',
         'Mak\\DefaultQuantityForWoocommerce\\Admin' => __DIR__ . '/../..' . '/includes/Admin.php',
         'Mak\\DefaultQuantityForWoocommerce\\Admin\\PluginMeta' => __DIR__ . '/../..' . '/includes/Admin/PluginMeta.php',
         'Mak\\DefaultQuantityForWoocommerce\\Admin\\Settings' => __DIR__ . '/../..' . '/includes/Admin/Settings.php',
-        'Mak\\DefaultQuantityForWoocommerce\\Ajax' => __DIR__ . '/../..' . '/includes/Ajax.php',
         'Mak\\DefaultQuantityForWoocommerce\\Assets' => __DIR__ . '/../..' . '/includes/Assets.php',
         'Mak\\DefaultQuantityForWoocommerce\\Frontend' => __DIR__ . '/../..' . '/includes/Frontend.php',
         'Mak\\DefaultQuantityForWoocommerce\\Frontend\\Storefront' => __DIR__ . '/../..' . '/includes/Frontend/Storefront.php',
-        'Mak\\DefaultQuantityForWoocommerce\\Helpers' => __DIR__ . '/../..' . '/includes/Helpers.php',
         'Mak\\DefaultQuantityForWoocommerce\\Installer' => __DIR__ . '/../..' . '/includes/Installer.php',
         'Mak\\DefaultQuantityForWoocommerce\\Traits\\Singleton' => __DIR__ . '/../..' . '/includes/Traits/Singleton.php',
     );

@@ -156,7 +156,7 @@ class Settings {
 				'type'              => 'number',
 				'custom_attributes' => [
 					'step' => '1',
-					'min'  => '1',
+					'min'  => '0',
 				],
 			]
 		);

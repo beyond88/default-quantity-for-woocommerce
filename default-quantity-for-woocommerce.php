@@ -10,28 +10,28 @@
  * Plugin Name:       Default Quantity for WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/default-quantity-for-woocommerce
  * Description:       Discover the simplest method to establish default quantities for your WooCommerce store effortlessly.
- * Version:           2.0.2
+ * Version:           2.0.4
  * Author:            Mohiuddin Abdul Kader
  * Author URI:        https://github.com/beyond88
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       default-quantity-for-woocommerce
  * Domain Path:       /languages
- * Requires PHP:      7.2
- * Requires at least: 5.0
- * Tested up to:      6.2
+ * Requires Plugins: woocommerce
+ * Requires PHP:      7.4
+ * Requires at least: 5.9
+ * Tested up to:      6.6.2
  *
- * WC requires at least: 5.0
- * WC tested up to:   7.8.2
+ * WC requires at least: 8.0.0
+ * WC tested up to: 9.3.3
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 require_once __DIR__ . '/vendor/autoload.php';
+
 /**
  * The main plugin class.
  */
@@ -42,20 +42,24 @@ final class DefaultQuantityForWoocommerce {
 	 *
 	 * @var string
 	 */
-	const VERSION = '2.0.2';
+	const VERSION = '2.0.4';
 
 	/**
 	 * Class constructor.
 	 */
-	private function __construct() {
+	public function __construct() {
 		// REMOVE THIS AFTER DEV
 		error_reporting( E_ALL ^ E_DEPRECATED );
-
 		$this->define_constants();
-
 		register_activation_hook( DQFWC_FILE, [ $this, 'activate' ] );
-
 		add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+		
+		// Declare HPOS compatibility early
+		add_action( 'before_woocommerce_init', function() {
+			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			}
+		} );
 	}
 
 	/**
@@ -85,11 +89,10 @@ final class DefaultQuantityForWoocommerce {
 		define( 'DQFWC_URL', plugins_url( '', DQFWC_FILE ) );
 		define( 'DQFWC_ASSETS', DQFWC_URL . '/assets' );
 		define( 'DQFWC_BASENAME', plugin_basename( __FILE__ ) );
-		define( 'DQFWC_PLUGIN_NAME', 'Default quantity for WooCommerce' );
-		define( 'DQFWC_MIN_WC_VERSION', '3.1' );
-		define( 'DQFWC_MINIMUM_PHP_VERSION', '5.6.0' );
-		define( 'DQFWC_MINIMUM_WP_VERSION', '4.4' );
-		define( 'DQFWC_MINIMUM_WC_VERSION', '3.1' );
+		define( 'DQFWC_PLUGIN_NAME', 'Default Quantity for WooCommerce' );
+		define( 'DQFWC_MINIMUM_PHP_VERSION', '7.2' );
+		define( 'DQFWC_MINIMUM_WP_VERSION', '5.9' );
+		define( 'DQFWC_MINIMUM_WC_VERSION', '8.0' );
 	}
 
 	/**
@@ -98,18 +101,12 @@ final class DefaultQuantityForWoocommerce {
 	 * @return void
 	 */
 	public function init_plugin() {
+		// Remove the old compatibility declaration
+		// The new one is added in the constructor with before_woocommerce_init hook
+
 		new Mak\DefaultQuantityForWoocommerce\Assets();
-
-		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
-			new Mak\DefaultQuantityForWoocommerce\Ajax();
-		}
-
-		if ( is_admin() ) {
-			new Mak\DefaultQuantityForWoocommerce\Admin();
-		}
-
+		new Mak\DefaultQuantityForWoocommerce\Admin();
 		new Mak\DefaultQuantityForWoocommerce\Frontend();
-		new Mak\DefaultQuantityForWoocommerce\API();
 	}
 
 	/**

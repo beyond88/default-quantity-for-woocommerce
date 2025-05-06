@@ -3,11 +3,11 @@ Contributors: hossain88
 Donate Link: https://github.com/beyond88
 Tags: default, quantity, default quantity, woocommerce quantity, minimum quantity
 Requires at least: 5.0
-Tested up to: 6.5.3
+Tested up to: 6.8
 WC requires at least: 5.0
-WC tested up to: 8.9.1
-Requires PHP: 7.2
-Stable tag: 2.0.3
+WC tested up to: 9.8
+Requires PHP: 7.4
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,26 +71,43 @@ This section describes how to install the plugin and get it working
 
 == Changelog ==
 
-= 1.0.0 =
-Initial version released
+= 2.0.4 =
+* Fixed 0 value save issue
 
-= 1.0.1 =
-Fix fatal error
-
-= 1.0.2 =
-Fix missing admin directory
-
-= 1.0.3 =
-Tested on latest WordPress and WooCommerce
-
-= 2.0.0 =
-Tested on 6.2 and added composer
-
-= 2.0.1 =
-Tested on WC 7.8.2 and update require PHP version
+= 2.0.3 =
+* Tested on WordPress 6.5.3 and WooCommerce 8.9.1
 
 = 2.0.2 =
 Fix function missing
 
-= 2.0.3 =
-* Tested on WordPress 6.5.3 and WooCommerce 8.9.1
+= 2.0.1 =
+Tested on WC 7.8.2 and update require PHP version
+
+= 2.0.0 =
+Tested on 6.2 and added composer
+
+= 1.0.3 =
+Tested on latest WordPress and WooCommerce
+
+= 1.0.2 =
+Fix missing admin directory
+
+= 1.0.1 =
+Fix fatal error
+
+= 1.0.0 =
+Initial version released
+
+
+
+
+
+
+
+
+
+
+
+
+
+
